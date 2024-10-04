@@ -60,3 +60,14 @@ CREATE TABLE IF NOT EXISTS `messages` (
   `Message` text NOT NULL,
   PRIMARY KEY (`Msg_Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+
+CREATE TABLE transactions (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    sender_acc_no VARCHAR(20) NOT NULL,
+    receiver_acc_no VARCHAR(20) NOT NULL,
+    amount DECIMAL(15, 2) NOT NULL,
+    transfer_date DATETIME DEFAULT CURRENT_TIMESTAMP,
+    status VARCHAR(20) NOT NULL
+);
+
