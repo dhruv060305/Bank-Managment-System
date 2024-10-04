@@ -13,6 +13,7 @@
         <nav>
             <a href="index.php">Home</a>
             <a href="money_transfer.php">Transfer Money</a>
+            <a href="transfer.php">Transaction History</a>
             <a href="logout.php">Logout</a>
         </nav>
     </header>
