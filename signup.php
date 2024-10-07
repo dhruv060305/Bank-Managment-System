@@ -10,6 +10,7 @@
 <body>
     <header>
         <h1>Create a New Account</h1>
+        <a href="index.php">Home</a>
     </header>
     <section>
         <form method="POST" action="">
