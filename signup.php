@@ -9,7 +9,10 @@
 </head>
 <body>
     <header>
+        <nav>
         <h1>Create a New Account</h1>
+        <a href="index.php">Home</a>
+        </nav>
     </header>
     <section>
         <form method="POST" action="">
