@@ -11,7 +11,7 @@
     <header>
         <nav>
         <h1>Login to Your Account</h1>
-        <a href="index.php">Home</a>
+        <a href="index.html">Home</a>
         </nav>
     </header>
     <section>
