@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-image: linear-gradient(to right, black, rgb(78, 78, 78));
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logs{
+    height: 400px;
+    width: 495px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin-top: 150px;
+    background: transparent;
+    /* box-shadow: 5px 5px 5px 5px rgb(78, 199, 78); */
+    background-color: transparent;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    animation: boxani 1s linear forwards;
+}
+
+a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+    font-size: larger;
+}
+
+button{
+    height: 40px;
+    width: 100px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(78, 199, 78);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.1s ease-in-out;
+}
+
+button:hover{
+    border: 2px solid white;
+    height: 50px;
+    width: 150px;
+}
+
+header{
+    width: 500px;
+    margin-top: 50px;
+    margin-left: 30px;
+}
+
+#Head2{
+    animation: Ammi 1s  linear forwards;
+    opacity: 0;
+}
+
+h1{
+    color: rgb(78, 199, 78);
+    font-size: 60px;
+    opacity: 0;
+    animation: Ammi 1s 2s linear forwards;
+}
+
+
+h2{
+    opacity: 0;
+    animation: Ammi 1s 3s linear forwards;
+}
+
+p{
+    opacity: 0;
+    margin-top: 10px;
+    animation: Ammi 1s 4s ease-out forwards;
+}
+
+p::after{
+    opacity: 1;
+}
+
+@keyframes Ammi{
+    0% {
+        transform: translateX(150px);
+        opacity: 0;
+    }
+    25%{
+        transform: translateX(100px);
+        opacity: 0.3;
+    }
+    50%{
+        transform: translateX(80px);
+        opacity: 0.5;
+    }
+    75%{
+        transform: translateX(50px);
+        opacity: 0.8;
+    }
+    100%{
+        transform: translateX(10px);
+        opacity: 1;
+    }
+}
+
+@keyframes boxani{
+    0% {
+        transform: translateX(150px);
+        opacity: 0;
+    }
+    25%{
+        transform: translateX(100px);
+        opacity: 0.3;
+    }
+    50%{
+        transform: translateX(80px);
+        opacity: 0.5;
+    }
+    75%{
+        transform: translateX(50px);
+        opacity: 0.8;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
