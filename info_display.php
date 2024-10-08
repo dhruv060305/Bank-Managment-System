@@ -11,7 +11,7 @@
     <header>
         <h1>Welcome to Your Account, <?php echo $_SESSION['Acc_Name']; ?>!</h1>
         <nav>
-            <a href="index.php">Home</a>
+            <a href="index.html">Home</a>
             <!-- <a href="money_transfer.php">Transfer Money</a> -->
             <a href="transfer.php">Transfer Money</a>
             <a href="logout.php">Logout</a>

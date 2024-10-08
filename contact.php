@@ -11,7 +11,7 @@
     <header>
         <h1>Contact Us</h1>
         <nav>
-            <a href="index.php">Home</a>
+            <a href="index.html">Home</a>
             <a href="signup.php">Signup</a>
             <a href="login.php">Login</a>
         </nav>

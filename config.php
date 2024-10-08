@@ -1,7 +1,7 @@
 <?php
 $host = "localhost";
-$user = "root"; // Change this if your MySQL user is different
-$pass = "";     // Change this if your MySQL password is set
+$user = "root"; 
+$pass = "";     
 $db = "bank_management";
 
 // Create connection
