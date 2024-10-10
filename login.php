@@ -5,13 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Bank Management System</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style3.css">
 </head>
 <body>
     <header>
         <nav>
-        <h1>Login to Your Account</h1>
-        <a href="index.html">Home</a>
+        <h2>Login to</h2>
+        <h1>Your Account</h1>
+        <div id="des">
+            <p>Zeta Bank's system is a secure, efficient platform designed to manage all banking operations seamlessly. It supports a wide range of services, including account management, transactions, loans, and digital banking. The system integrates cutting-edge technology to ensure fast processing, user-friendly interfaces, and robust security for customer data.</p>
+            <button id="hb"><a href="index.html">Home</a></button>
+        </div>
+        
         </nav>
     </header>
     <section>
@@ -22,7 +27,7 @@
             <label for="password">Password:</label>
             <input type="password" name="password" id="password" required><br>
 
-            <input type="submit" name="login" value="Login">
+            <button type="submit">Login</button>
         </form>
     </section>
 </body>
