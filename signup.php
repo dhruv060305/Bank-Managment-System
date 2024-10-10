@@ -5,30 +5,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup - Bank Management System</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
 </head>
 <body>
     <header>
         <nav>
-        <h1>Create a New Account</h1>
-        <a href="index.html">Home</a>
+        <h2>Create</h2>
+        <h1>New Account</h1>
+        <div id="des">
+            <p>Zeta Bank is a modern financial institution focused on providing innovative banking solutions, excellent customer service, and a secure digital experience. It offers a range of personal and business banking services tailored to meet the needs of its clients.</p>
+            <button id="hb"><a href="index.html">Home</a></button>
+        </div>
+        
         </nav>
     </header>
     <section>
+        <div id="log">
         <form method="POST" action="">
-            <label for="acc_name">Account Name:</label>
+            <label for="acc_name">Account Name:</label><br>
             <input type="text" name="acc_name" id="acc_name" required><br>
 
-            <label for="userid">User ID:</label>
+            <label for="userid">User ID:</label><br>
             <input type="text" name="userid" id="userid" required><br>
 
-            <label for="password">Password:</label>
+            <label for="password">Password:</label><br>
             <input type="password" name="password" id="password" required><br>
 
-            <label for="balance">Initial Balance:</label>
+            <label for="balance">Initial Balance:</label><br>
             <input type="number" step="0.01" name="balance" id="balance" required><br>
 
-            <input type="submit" name="signup" value="Create Account">
+            <button type="submit">Submit</button>
+            </div>
         </form>
     </section>
 </body>
