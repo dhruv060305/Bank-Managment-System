@@ -34,10 +34,10 @@
             <label for="balance">Initial Balance:</label><br>
             <input type="number" step="0.01" name="balance" id="balance" required><br>
 
-            <button type="submit">Submit</button>
+            <button type="submit" name="signup">Submit</button>
             </div>
         </form>
-    </section>
+    </section><br>
 </body>
 </html>
 
@@ -51,7 +51,7 @@ if (isset($_POST['signup'])) {
     // Insert into database
     $sql = "INSERT INTO accounts (Acc_Name, Balance, UserId, Password) VALUES ('$acc_name', $balance, '$userid', '$password')";
     if ($conn->query($sql) === TRUE) {
-        echo "<p>Account created successfully! <a href='login.php'>Login here</a>.</p>";
+        echo "<p>Account created successfully!</p>";
     } else {
         echo "<p>Error: " . $sql . "<br>" . $conn->error . "</p>";
     }

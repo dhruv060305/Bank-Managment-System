@@ -27,9 +27,10 @@
             <label for="password">Password:</label>
             <input type="password" name="password" id="password" required><br>
 
-            <button type="submit">Login</button>
+            <button type="submit" name="login">Submit</button>
+    
         </form>
-    </section>
+    </section><br>
 </body>
 </html>
 
@@ -51,7 +52,7 @@ if (isset($_POST['login'])) {
             $_SESSION['Balance'] = $row['Balance'];
             header("Location: info_display.php");
         } else {
-            echo "<p>Invalid password. Try again.</p>";
+            echo "<p>Invalid password.</p>";
         }
     } else {
         echo "<p>User ID not found.</p>";
