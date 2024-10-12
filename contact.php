@@ -10,14 +10,14 @@
 <body>
     <header>
         <h1>Contact Us</h1>
+        <h2>We'd Love to Hear From You</h2>
+        <p>Zeta Bank is a modern financial institution focused on providing innovative banking solutions, excellent customer service, and a secure digital experience. It offers a range of personal and business banking services tailored to meet the needs of its clients.</p>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="signup.php">Signup</a>
-            <a href="login.php">Login</a>
+        <button><a href="index.html">Home</a> </button>
         </nav>
     </header>
     <section>
-        <h2>We'd Love to Hear From You</h2>
+        
         <form method="POST" action="">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required><br>
@@ -28,7 +28,7 @@
             <label for="message">Message:</label><br>
             <textarea id="message" name="message" rows="4" required></textarea><br>
 
-            <input type="submit" name="submit" value="Submit">
+            <button type="submit" name="submit">Send Messages</button>
         </form>
     </section>
 </body>
