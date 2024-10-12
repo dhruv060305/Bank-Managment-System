@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: white;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+}
+
+body{
+    background-image: linear-gradient(to right, black, rgb(78, 78, 78));
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+header{
+    text-align: center;
+}
+
+#main{
+    height: 500px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+button{
+    height: 40px;
+    width: 100px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(78, 199, 78);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.1s ease-in-out;
+}
+
+button:hover{
+    border: 2px solid white;
+    height: 50px;
+    width: 120px;
+}
+
+label{
+    font-size: 20px;
+    color: rgb(78, 199, 78); 
+}
+
+input{
+    height: 25px;
+    width: 250px;
+    margin-bottom: 20px;
+    color: black;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 700;
+    border: none;
+    transition: all 0.1s ease-in-out;
+}
+
+input:hover{
+    height: 30px;
+    width: 270px;
+    border: 2px solid black;
+}
+
+h1{
+    color: rgb(78, 199, 78);
+    font-size: 60px;
+}
+th{
+    color: rgb(78, 199, 78); 
+}
+table{
+   border-radius: 5px; 
+
+}
+
+tr{
+    transition: all 0.1s linear;
+}
+
+tr:hover{
+    scale: 1.1;
+    background-color: gray;
+}

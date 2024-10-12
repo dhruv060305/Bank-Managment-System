@@ -20,9 +20,10 @@ if (!isset($_SESSION['Acc_No'])) {
     <header>
         <h1>Transfer Money</h1>
     </header>
+    <div id="main">
     <section>
         <form method="POST" action="">
-            <label for="sender">Sender Account No:</label>
+            <label for="sender">Sender Account No:</label>  
             <input type="text" name="sender" id="sender" value="<?php echo htmlspecialchars($_SESSION['Acc_No']); ?>" readonly><br>
 
             <label for="receiver">Receiver Account No:</label>
@@ -31,7 +32,8 @@ if (!isset($_SESSION['Acc_No'])) {
             <label for="amount">Amount to Transfer:</label>
             <input type="number" step="0.01" name="amount" id="amount" required><br>
 
-            <input type="submit" name="transfer" value="Transfer">
+            <button type="submit" name="transfer">Transfer</button><br>
+            <button> <a href="logout.php">Logout</a></button>
         </form>
     </section>
 
@@ -66,6 +68,7 @@ if (!isset($_SESSION['Acc_No'])) {
             ?>
         </table>
     </section>
+    </div>
 </body>
 </html>
 
