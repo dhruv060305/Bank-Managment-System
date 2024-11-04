@@ -14,16 +14,15 @@ if (!isset($_SESSION['Acc_No'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Money Transfer - Bank Management System</title>
-    <link rel="stylesheet" href="css/style5.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <h1>Transfer Money</h1>
     </header>
-    <div id="main">
     <section>
         <form method="POST" action="">
-            <label for="sender">Sender Account No:</label>  
+            <label for="sender">Sender Account No:</label>
             <input type="text" name="sender" id="sender" value="<?php echo htmlspecialchars($_SESSION['Acc_No']); ?>" readonly><br>
 
             <label for="receiver">Receiver Account No:</label>
@@ -32,43 +31,9 @@ if (!isset($_SESSION['Acc_No'])) {
             <label for="amount">Amount to Transfer:</label>
             <input type="number" step="0.01" name="amount" id="amount" required><br>
 
-            <button type="submit" name="transfer">Transfer</button><br>
-            <button> <a href="logout.php">Logout</a></button>
+            <input type="submit" name="transfer" value="Transfer">
         </form>
     </section>
-
-    <section>
-        <h2>Transaction History</h2>
-        <table border="1">
-            <tr>
-                <th>Transaction ID</th>
-                <th>Sender Account</th>
-                <th>Receiver Account</th>
-                <th>Amount</th>
-                <th>Date</th>
-                <th>Status</th>
-            </tr>
-            <?php
-            // Fetch and display the transaction history
-            $history_query = $conn->prepare("SELECT * FROM transactions WHERE sender_acc_no = ? OR receiver_acc_no = ? ORDER BY transfer_date DESC");
-            $history_query->bind_param("ss", $_SESSION['Acc_No'], $_SESSION['Acc_No']);
-            $history_query->execute();
-            $history_result = $history_query->get_result();
-
-            while ($row = $history_result->fetch_assoc()) {
-                echo "<tr>
-                        <td>{$row['id']}</td>
-                        <td>{$row['sender_acc_no']}</td>
-                        <td>{$row['receiver_acc_no']}</td>
-                        <td>{$row['amount']}</td>
-                        <td>{$row['transfer_date']}</td>
-                        <td>{$row['status']}</td>
-                    </tr>";
-            }
-            ?>
-        </table>
-    </section>
-    </div>
 </body>
 </html>
 
@@ -124,12 +89,6 @@ if (isset($_POST['transfer'])) {
             $update_receiver->bind_param("ds", $amount, $receiver);
             $update_receiver->execute();
 
-            // Record transaction in history
-            $transaction_record = $conn->prepare("INSERT INTO transactions (sender_acc_no, receiver_acc_no, amount, status) VALUES (?, ?, ?, ?)");
-            $status = "Successful";
-            $transaction_record->bind_param("ssds", $sender, $receiver, $amount, $status);
-            $transaction_record->execute();
-
             // Commit transaction
             $conn->commit();
 
@@ -138,12 +97,6 @@ if (isset($_POST['transfer'])) {
             // Rollback transaction in case of an error
             $conn->rollback();
             echo "<p>Transfer failed. Please try again later.</p>";
-
-            // Record failed transaction
-            $transaction_record = $conn->prepare("INSERT INTO transactions (sender_acc_no, receiver_acc_no, amount, status) VALUES (?, ?, ?, ?)");
-            $status = "Failed";
-            $transaction_record->bind_param("ssds", $sender, $receiver, $amount, $status);
-            $transaction_record->execute();
         }
     } else {
         echo "<p>Insufficient balance.</p>";
